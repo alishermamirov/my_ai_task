@@ -10,6 +10,7 @@ st.title('Rasmni aniqlashl')
 
 # rasmni joylash
 files=st.file_uploader("Rasm tanlash",  help="Siz bu orqali asm yuklashingiz mumkin", type=["png","jpeg","jpg"])
+st.text_input("title")
 if files:
     st.image(files) # rasmni chiqarish
     # PIL convert
@@ -24,3 +25,5 @@ if files:
     # plotting
     fig=px.bar(x=probs*100, y=model.dls.vocab)
     st.plotly_chart(fig)
+
+    
